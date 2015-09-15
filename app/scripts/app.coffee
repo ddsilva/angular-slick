@@ -35,6 +35,7 @@ angular.module('slick', [])
       pauseOnHover: "@"
       pauseOnDotsHover: "@"
       responsive: "="
+      mobileFirst: "@"
       rtl: "@"
       slide: "@"
       slidesToShow: "@"
@@ -93,6 +94,7 @@ angular.module('slick', [])
             onSetPosition: if attrs.onSetPosition then scope.onSetPosition else undefined
             pauseOnHover: scope.pauseOnHover isnt "false"
             responsive: scope.responsive or undefined
+            mobileFirst: scope.mobileFirst is "true"
             rtl: scope.rtl is "true"
             slide: scope.slide or "div"
             slidesToShow: if scope.slidesToShow? then parseInt(scope.slidesToShow, 10) else 1
